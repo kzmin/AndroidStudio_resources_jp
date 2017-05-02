@@ -1,7 +1,8 @@
 <html>
 <body>
-<font face="verdana" size="-1">
-この検査は、ローカル変数と置換できる冗長なクラス フィールドを検索します。そのフィールドへの代入がフィールドのローカルの使用箇所すべてに先行する場合、フィールドは削除され、その使用箇所はローカル変数と置換されます。
-</font>
+
+This inspection searches for redundant class fields that can be replaced with local variables.
+If all local usages of a field are preceded by assignments to that field, the
+field can be removed and its usages replaced with local variables.
 </body>
 </html>

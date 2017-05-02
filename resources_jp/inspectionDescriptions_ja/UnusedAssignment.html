@@ -1,9 +1,10 @@
 <html>
 <body>
-<font face="verdana" size="-1">この検査は、以下のように、変数が代入後に使用されないケースを指摘します :<br>
-&nbsp;- 変数が代入後に読み込まれない、または<br>
-&nbsp;- 次の変数を読み込む前に別の代入により値が常に上書きされる、または<br>
-&nbsp;- 変数の初期化子が (上の 2 つの理由のいずれかにより) 冗長である、または<br>
-&nbsp;- 変数が使用されない</font>
+This inspection points out the cases where a variable value
+is never used after its assignment, i.e.: <br>
+&nbsp;- the variable never gets read after assignment OR <br>
+&nbsp;- the value is always overwritten with another assignment before the next variable read OR <br>
+&nbsp;- the variable initializer is redundant (for one of the above two reasons) OR <br>
+&nbsp;- the variable is never used.
 </body>
 </html>

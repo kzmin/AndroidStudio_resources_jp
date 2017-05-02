@@ -1,22 +1,26 @@
 <html>
 <body>
-<font face="verdana" size="-1">
-この検査は、ハードコードされている文字列リテラルのインスタンスを報告します。ハードコードされている文字列リテラルは、国際化環境でエラーになる場合があります。<br>
-  この検査は、空の文字列と空白のみからなる文字列のインスタンスは報告しません。
-<!-- tooltip end -->
-<p>
-この検査で以下の文字列を報告するには、該当するチェックボックスをオンにします :
-  <ul>
-  <li><b><font color="#000080">assert str.equals(<font color="#008000">"message"</font>)</font></b> のような assert 文</li>
-  <li><b><font color="#000080">new Exception(<font color="#008000">"message"</font>)</font></b> のような例外コンストラクタ呼び出し</li>
-  <li><b><font color="#000080">assertEquals(str, <font color="#008000">"message"</font>)</font></b> のような JUnit assert 呼び出し</li>
-  <li><b><font color="#000080">getStringByKey(<font color="#008000">"key"</font>)</font></b> のような文字列を返すメソッドの唯一の引数</li>
-  <li><b><font color="#000080">Class.forName(<font color="#008000">"java.lang.Object"</font>);</font></b> のような正式な既存のクラス名の値を含むリテラル</li>
-  <li><b><font color="#000080">bundle.getString(<font color="#008000">"authentication.failed"</font>);</font></b> のような正式な既存のプロパティ キーの値を含むリテラル</li>
-  </ul>
 
-  Java コード文字列リテラルを <b><font color="#000080">java.util.ResourceBundle.getString()</font></b> メソッド呼び出しに変換するクイックフィックスが提供されています。
-  <br>
-</font>
+This inspection reports any instances of hardcoded String literals. Hardcoded string literals are probably errors in
+an internationalized environment. This inspection won't report empty strings and strings consisting of only whitespace.
+
+<p>
+  The checkboxes below may be used to further specialize whether this inspection should report
+  strings in:
+<ul>
+  <li>assert statements, like in <b><font color="#000080">assert str.equals(<font color="#008000">"message"</font>)</font></b></li>
+  <li>exception constructor calls, like in <b><font color="#000080">new Exception(<font color="#008000">"message"</font>)</font></b></li>
+  <li>JUnit assert calls, like in <b><font color="#000080">assertEquals(str, <font color="#008000">"message"</font>)</font></b></li>
+  <li>the only argument to a method returning String, like in <b><font color="#000080">getStringByKey(<font
+      color="#008000">"key"</font>)</font></b></li>
+  <li>literals with value of legal and existing class name like <b><font color="#000080">Class.forName(<font color="#008000">"java.lang.Object"</font>);</font></b>
+  </li>
+  <li>literals with value of legal and existing property key <b><font color="#000080">bundle.getString(<font color="#008000">"authentication.failed"</font>);</font></b>
+  </li>
+</ul>
+
+There is a quickfix provided that transforms a Java code string literal
+into a <b><font color="#000080">java.util.ResourceBundle.getString()</font></b>
+method call.
 </body>
 </html>

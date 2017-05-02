@@ -1,13 +1,13 @@
 <html>
 <body>
-<font face="verdana" size="-1">
-この検査は、コンパイラによって明白に推測されるために明示的な引数の型が省略可能な、パラメータ化されたメソッドへの呼び出しをすべて報告します。<br>
-これらの呼び出しを行うと、コードが難解になります。<br><br>
-例えば、次のようなパラメータ化されたメソッドへの呼び出しを行う場合 :
-<pre>
-&nbsp;&nbsp;&nbsp;&nbsp;<b><font color="#000080">this</font></b>.&lt;String&gt;addItem(<font color="#008000">""</font>);
-</pre> - <b><font color="#000080">&lt;String&gt;</font></b> の使用法が強調表示されます。<br><br>
 
-</font>
+This inspection reports all calls to parametrized methods where explicit argument types
+can be omitted, since they will be unambiguously inferred by compiler. <br>
+Such usages make code excessive and thus less readable. <br> <br>
+For example if you have a call to parametrized method like:
+ <pre>
+&nbsp;&nbsp;&nbsp;&nbsp;<b><font color="#000080">this</font></b>.&lt;String&gt;addItem(<font color="#008000">""</font>);
+</pre>
+- the usage of <b><font color="#000080">&lt;String&gt;</font></b> will be highlighted. <br> <br>
 </body>
 </html>
