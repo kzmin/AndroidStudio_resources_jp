@@ -18,7 +18,7 @@ AndroidStudioのlibディレクトリにコピーしてください。
 
     OS: Mac OS Sierra ver10.12.4
 
-    AndroidStudio version: ver2.2.1
+    AndroidStudio version: ver2.3.1
 
 ----
 
